@@ -1,7 +1,6 @@
 "use client";
-// @flow strict
 import { isValidEmail } from "@/utils/check-email";
-import axios from "axios";
+import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
@@ -31,26 +30,34 @@ function ContactForm() {
       return;
     } else {
       setError({ ...error, required: false });
-    };
+    }
 
     try {
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
+      const result = await emailjs.send(
+        'service_2okjz0x', // Replace with your EmailJS service ID
+        'template_0iw66o9', // Replace with your EmailJS template ID
+        {
+          from_name: userInput.name,
+          from_email: userInput.email,
+          message: userInput.message,
+        },
+        'GMDxfdGqL-yu58YOF' // Replace with your EmailJS public key
       );
 
-      toast.success("Message sent successfully!");
-      setUserInput({
-        name: "",
-        email: "",
-        message: "",
-      });
+      if (result.text === 'OK') {
+        toast.success("Message sent successfully!");
+        setUserInput({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
-    };
+    }
   };
 
   return (
