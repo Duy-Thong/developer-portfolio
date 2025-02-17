@@ -39,13 +39,7 @@ function HeroSection() {
             >
               <BsGithub size={30} />
             </Link>
-            <Link
-              href={personalData.linkedIn}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsLinkedin size={30} />
-            </Link>
+            
             <Link
               href={personalData.facebook}
               target='_blank'
@@ -53,20 +47,7 @@ function HeroSection() {
             >
               <FaFacebook size={30} />
             </Link>
-            <Link
-              href={personalData.leetcode}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
-              href={personalData.twitter}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+            
           </div>
 
           <div className="flex items-center gap-3">
@@ -108,7 +89,7 @@ function HeroSection() {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Abu Said</span>
+                <span className="text-amber-300">Dao Duy Thong</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
@@ -118,20 +99,23 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">NextJS</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Docker</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"'],"}</span>
+                <span className="text-amber-300">Java</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Firebase</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Tailwind</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">DevOps</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Basic AI</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Prompt Engineering</span>
+                <span className="text-gray-400">{"']"}</span>
+                <span className="text-gray-400">,</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
@@ -167,12 +151,7 @@ function HeroSection() {
                 <span className="mr-2 text-white">problemSolver</span>
                 <span className="text-amber-300">&amp;&amp;</span>
               </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
+              
               <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
               <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
               <div><span className="text-gray-400">{`};`}</span></div>
